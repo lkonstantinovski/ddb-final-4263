@@ -1,0 +1,10 @@
+SELECT 
+
+client.id_client AS idClient,
+client.firstName AS FName,
+client.lastName AS Surame,
+SUM(packet.id_packet) AS SOP
+FROM client
+JOIN packet ON client.id_client = packet.Fk_client
+GROUP BY 
+client.id_client

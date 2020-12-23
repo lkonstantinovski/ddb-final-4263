@@ -1,0 +1,12 @@
+BEGIN
+
+SELECT
+status_delivery.status
+FROM delivery
+INNER JOIN packet
+ON delivery.id_packet = packet.id_packet
+INNER JOIN status_delivery 
+ON delivery.id_status = status_delivery.id_status
+WHERE packet.id_packet = packet_id;
+
+END
